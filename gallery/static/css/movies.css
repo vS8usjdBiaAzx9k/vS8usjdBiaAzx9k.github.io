@@ -1,0 +1,116 @@
+#movies {
+    background-color: var(--secondary-background-color);
+    padding: 0 0 50px 0;
+}
+
+.card {
+    display: flex;
+    flex-basis: 300px;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    background-color: var(--card-background-color);
+    border-radius: 5px;
+
+    overflow: hidden;
+    margin: 10px;
+}
+
+.card-image {
+    height: 310px;
+    transition: .5s all;
+
+    background-size: cover;
+    background-position: center;
+}
+
+#drive-film .card-image {
+    background-image: url("./../images/movies/drive.jpg");
+}
+
+#joker-film .card-image {
+    background-image: url("./../images/movies/joker.jpg");
+}
+
+#office-film .card-image {
+    background-position: bottom;
+    background-image: url("./../images/movies/office.jpg");
+}
+
+#got-film .card-image {
+    background-position: center;
+    background-image: url("./../images/movies/got.jpg");
+}
+
+.card-body-wrap {
+    height: 90px;
+    overflow: hidden;
+    transition: .5s all;
+}
+
+.card:hover .card-body-wrap, .card:hover .card-image {
+    height: 200px;
+}
+
+.card:hover .card-intro {
+    margin-top: 15px;
+}
+
+.card-body {
+    padding: 30px;
+    display: flex;
+}
+
+.card-title {
+    font-size: 15pt;
+    line-height: 1.5;
+    font-weight: 700;
+    color: var(--accent-text-color);
+}
+
+.section-text-wrap {
+    display: flex;
+    justify-content: left;
+}
+
+#movies .container h1 {
+    position: relative;
+    margin-bottom: 25px;
+    font-size: 20pt;
+    text-transform: uppercase;
+    color: var(--primary-text-color);
+}
+
+.card-intro {
+    transition: .5s all;
+    margin-top: 30px;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    max-height: 72px;
+    overflow: hidden;
+    color: var(--primary-text-color)
+}
+
+.cards-wrap {
+    flex-wrap: wrap;
+}
+
+.button-wrap {
+    display: flex;
+}
+
+.button-wrap input {
+    cursor: pointer;
+    padding: 10px 20px;
+    background: var(--accent-text-color);
+    border: none;
+    color: #FFFFFF;
+    border-radius: 2px;
+
+    transition: .2s all;
+}
+
+.button-wrap input:hover {
+    background: #c192fd;
+    transform: scale(1.1);
+}

@@ -1,0 +1,60 @@
+@import url('./gallery.css');
+@import url('./title.css');
+@import url('./movies.css');
+@import url('./footer.css');
+
+:root {
+    --primary-background-color: #1F1F1F;
+    --secondary-background-color: #121212;
+    --card-background-color: #FFFFFF;
+
+    --primary-text-color: #5f4c80;
+    --accent-text-color: #ba85fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    user-select: none;
+}
+
+section {
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    padding: 75px 0;
+    margin: 0 auto;
+    width: 70vw;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-left {
+    display: flex;
+    justify-content: left;
+}
+
+.flex-right {
+    justify-content: right;
+}
+
+#title {
+    height: 40vh;
+}
+
+#movies {
+    height: auto;
+}
