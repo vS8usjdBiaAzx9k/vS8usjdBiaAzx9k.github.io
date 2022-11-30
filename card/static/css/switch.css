@@ -1,0 +1,105 @@
+#check {
+    appearance: none;
+    width: 60px;
+    height: 100vh;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    background: black;
+    cursor: pointer;
+}
+
+#check:not(:checked)::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #5b0101, black);
+    background-size: 400%;
+    filter: blur(30px);
+
+    transition: .5s;
+    animation: gradient 5s linear infinite;
+}
+
+#check::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #061579, black);
+    background-size: 400%;
+    filter: blur(30px);
+
+    transition: .5s;
+    animation: gradient 5s linear infinite;
+}
+
+#check:not(:checked)::after, #check:checked::after {
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    transform: scale(-1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+    background: black;
+    position: absolute;
+    width: 60px;
+    height: 100vh;
+
+    font-size: 20pt;
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    letter-spacing: 5px;
+
+    transition: .5s;
+    animation: gradient 10s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#check:not(:checked)::after {
+    content: attr(data-text);
+    background: linear-gradient(-45deg, #a60000, #6e0101, #a60000);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#check:checked::after {
+    content: attr(data-swap);
+    background: linear-gradient(-45deg, #0133be, #060091, #0024bd);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#content-wrap {
+    width: calc(60px + (100vw - 60px) / 2);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#text, #card {
+    width: calc((100vw - 60px) / 2);
+    height: 100%;
+    background: black;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}

@@ -1,7 +1,9 @@
+@import url('../../../.global/themes/default.css');
+@import url('../../../.global/css/footer.css');
 @import url('./gallery.css');
+@import url('./movies.css');
 @import url('./title.css');
 @import url('./movies.css');
-@import url('./footer.css');
 
 :root {
     --primary-background-color: #1F1F1F;
@@ -57,4 +59,8 @@ section {
 
 #movies {
     height: auto;
+}
+
+footer {
+    box-shadow: 0 -13px 30px 3px rgba(0, 0, 0, 0.8);
 }

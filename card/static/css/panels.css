@@ -1,0 +1,134 @@
+/* CARD LOGO */
+.card-content-left-top .logo {
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+}
+
+#darkside .logo {
+    background: var(--darkside-background-primary);
+    box-shadow: inset 10px 10px 20px black;
+}
+
+#brightside .logo {
+    background: var(--brightside-background-secondary);
+    box-shadow: 0 0 15px #525252;
+}
+
+/* FIRST PANEL */
+
+.panel1 {
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    transform: rotate(-90deg);
+    transition: 0.5s;
+    transform-origin: bottom left;
+
+    padding: 20px 20px 0 20px;
+    font-family: "Roboto Light", sans-serif;
+
+    text-align: left;
+    font-size: 12px;
+    color: #535353;
+}
+
+#darkside .panel1 {
+    background: var(--darkside-background-primary);
+}
+
+#brightside .panel1 {
+    background: var(--brightside-background-primary);
+}
+
+.panel1 .text-section {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+.panel1 .title, .panel1 .text-section-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#darkside .panel1 .title,
+#darkside .panel1 .text-section-title {
+    color: var(--darkside-background-secondary);
+}
+
+#brightside .panel1 .title,
+#brightside .panel1 .text-section-title {
+    color: var(--brightside-background-secondary);
+}
+
+.panel1 .text-section .text-section-title:before {
+    content: "";
+    position: fixed;
+    transform: translate(0, 650%);
+    height: 3px;
+    width: 150px;
+    border-radius: 2px;
+}
+
+#darkside .text-section-title:before {
+    background-color: var(--darkside-background-secondary);
+}
+
+#brightside .text-section-title:before {
+    background-color: var(--brightside-background-secondary);
+}
+
+
+.card-content-left-bottom:hover .panel1 {
+    transform: rotate(0);
+}
+
+/* SECOND PANEL */
+.panel2 {
+    padding: 20px;
+    height: max-content;
+    border-radius: 10px;
+    transform: rotate(-90deg);
+    transition: 0.5s;
+    transform-origin: top right;
+
+    font-family: "Roboto Light", sans-serif;
+}
+
+#darkside .panel2 {
+    background: var(--darkside-background-primary);
+}
+
+#brightside .panel2 {
+    background: var(--brightside-background-primary);
+}
+
+.card-content-right:hover .panel2 {
+    transform: rotate(0);
+}
+
+.panel2 .title {
+    font-size: 10pt;
+    color: #535353;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.panel2 .planet-name {
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+#darkside .panel2 .planet-name {
+    color: var(--darkside-background-secondary);
+}
+
+#brightside .panel2 .planet-name {
+    color: var(--brightside-background-secondary);
+}
