@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: #D79111;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s all;
+}
+
+a:hover {
+    color: #fdb32c;
+}
+
+#main {
+    height: 100vh;
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+}
+
+#main #content {
+    width: 50%;
+    height: auto;
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header, footer {
+    width: 100%;
+    height: 96px;
+    padding: 32px;
+    font-size: 14px;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-inputs .input + .input {
+    margin-top: 16px;
+}
+
+.input label {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.input input {
+    width: 100%;
+    height: 38px;
+    border: 1px solid #D0D5DD;
+    filter: drop-shadow(0px 1px 2px rgba(16, 24, 40, 0.05));
+    border-radius: 8px;
+    padding: 14px 12px;
+    outline: none;
+}
+
+.input input[placeholder] {
+    color: #667085;
+    font-size: 14px;
+}
+
+.actions button {
+    width: 100%;
+    height: 38px;
+
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+
+    outline: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: .3s all;
+    color: #344054;
+}
+
+.actions .button + .social-button-group {
+    margin-top: 8px;
+}
+
+.actions .button button {
+    background: #de612d;
+    color: white;
+}
+
+.actions .button button:hover {
+    background: #f18051;
+}
+
+.row-remember-forgot {
+    margin: 14px 0;
+}
+
+.checkbox input + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.checkbox label {
+    font-size: 12px;
+}
+
+#forgot {
+    font-size: 12px;
+}
+
+.checkbox input + label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #D0D5DD;
+    transition: .15s all;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.checkbox input:checked + label::before {
+    border-color: #D95118;
+    background-color: #D95118;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.checkbox input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.actions .social-button-group button {
+    background: none;
+    border: 1px solid #D0D5DD;
+}
+
+.actions .social-button-group button:hover {
+    background: #f6f6f6;
+}
+
+.actions .social-button-group button * + * {
+    margin-left: 10px;
+}
+
+.form-header .text {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.form-header .support {
+    color: #475467;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 6px;
+}
+
+.form-footer .row {
+    font-size: 14px;
+    justify-content: center;
+}
+
+.form-footer .row * + * {
+    margin-left: 4px;
+}
+
+/* region Decoration */
+#main .image {
+    width: 50%;
+    background: #D3D0DF;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+#main .image .blur {
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(20px);
+    height: 50%;
+    width: 50vw;
+}
+
+#main .image .circle {
+    height: 275px;
+    width: 275px;
+    border-radius: 50%;
+    background: linear-gradient(157.32deg, #D69E0F 11.21%, #DA261C 90.43%);
+}
+/* endregion Decoration */
